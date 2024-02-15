@@ -1,0 +1,139 @@
+Certainly! Here are examples of each NumPy function with real data:
+
+1. **np.array**:
+   ```python
+   import numpy as np
+   
+   data = [1, 2, 3, 4, 5]
+   arr = np.array(data)
+   ```
+
+2. **np.arange**:
+   ```python
+   import numpy as np
+   
+   arr = np.arange(0, 10, 2)
+   ```
+
+3. **np.linspace**:
+   ```python
+   import numpy as np
+   
+   arr = np.linspace(0, 10, 5)
+   ```
+
+4. **np.zeros**:
+   ```python
+   import numpy as np
+   
+   arr = np.zeros((2, 3))
+   ```
+
+5. **np.ones**:
+   ```python
+   import numpy as np
+   
+   arr = np.ones((3, 2))
+   ```
+
+6. **np.eye**:
+   ```python
+   import numpy as np
+   
+   arr = np.eye(3)
+   ```
+
+7. **np.random.rand**:
+   ```python
+   import numpy as np
+   
+   arr = np.random.rand(2, 3)
+   ```
+
+8. **np.random.randn**:
+   ```python
+   import numpy as np
+   
+   arr = np.random.randn(2, 3)
+   ```
+
+9. **np.random.randint**:
+   ```python
+   import numpy as np
+   
+   arr = np.random.randint(0, 10, size=(2, 3))
+   ```
+
+10. **np.reshape**:
+    ```python
+    import numpy as np
+    
+    arr = np.arange(6).reshape((3, 2))
+    ```
+
+11. **np.concatenate**:
+    ```python
+    import numpy as np
+    
+    arr1 = np.array([[1, 2], [3, 4]])
+    arr2 = np.array([[5, 6]])
+    arr = np.concatenate((arr1, arr2), axis=0)
+    ```
+
+12. **np.transpose**:
+    ```python
+    import numpy as np
+    
+    arr = np.array([[1, 2], [3, 4]])
+    arr = np.transpose(arr)
+    ```
+
+13. **np.sort**:
+    ```python
+    import numpy as np
+    
+    arr = np.array([3, 1, 2])
+    arr = np.sort(arr)
+    ```
+
+14. **np.argmax**:
+    ```python
+    import numpy as np
+    
+    arr = np.array([[1, 2], [3, 4]])
+    idx = np.argmax(arr, axis=1)
+    ```
+
+15. **np.mean**:
+    ```python
+    import numpy as np
+    
+    arr = np.array([[1, 2], [3, 4]])
+    mean_val = np.mean(arr)
+    ```
+
+16. **np.sum**:
+    ```python
+    import numpy as np
+    
+    arr = np.array([[1, 2], [3, 4]])
+    sum_val = np.sum(arr)
+    ```
+
+17. **np.std**:
+    ```python
+    import numpy as np
+    
+    arr = np.array([[1, 2], [3, 4]])
+    std_val = np.std(arr)
+    ```
+
+18. **np.median**:
+    ```python
+    import numpy as np
+    
+    arr = np.array([[1, 2], [3, 4]])
+    median_val = np.median(arr)
+    ```
+
+These examples demonstrate the usage of each NumPy function with real data scenarios, covering a variety of applications such as data manipulation, random number generation, mathematical operations, and statistical analysis.
