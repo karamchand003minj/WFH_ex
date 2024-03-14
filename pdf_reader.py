@@ -39,3 +39,31 @@ def convert_pdf_to_txt(path):
 
 if __name__ == "__main__":
     print(convert_pdf_to_txt('test.pdf'))
+
+
+import fitz  # PyMuPDF
+import pytesseract
+from PIL import Image
+import tempfile
+import pdf2image
+
+pytesseract.pytesseract.tesseract_cmd = r'path/to/tesseract'  # Update this path
+
+def ocr_pdf(pdf_path):
+    # Convert PDF pages to images
+    pages = pdf2image.convert_from_path(pdf_path)
+    
+    text = ""
+    for page in pages:
+        # Save the image of the page in temp file
+        with tempfile.NamedTemporaryFile(delete=True) as temp:
+            page.save(temp.name, 'JPEG')
+            # Use pytesseract to do OCR on the image file
+            page_text = pytesseract.image_to_string(Image.open(temp.name))
+            text += page_text + "\n"
+    return text
+
+pdf_path = 'path/to/your/pdf.pdf'
+extracted_text = ocr_pdf(pdf_path)
+print(extracted_text)
+
